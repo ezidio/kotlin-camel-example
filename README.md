@@ -1,6 +1,8 @@
-Exemplo funcionando apresentado na talk
+Exemplo funcionando apresentado na talk =)
 
-https://www.youtube.com/watch?v=X_351K0WS4g
+Apresentação: https://www.youtube.com/watch?v=X_351K0WS4g
+
+Slides: https://github.com/ezidio/kotlin-camel-example
 
 #Docker
 
