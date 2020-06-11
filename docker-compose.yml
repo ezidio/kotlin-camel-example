@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  db_app:
+    image: postgres:9.4
+    environment:
+      POSTGRES_PASSWORD: pass
+    ports:
+      - "5433:5432"
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"

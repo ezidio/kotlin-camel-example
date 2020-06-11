@@ -1,0 +1,44 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="APP" class="ch.qos.logback.core.FileAppender">
+        <file>logs/app.log</file>
+        <encoder>
+            <pattern>%date %level [%thread] %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="EIVE" class="ch.qos.logback.core.FileAppender">
+        <file>logs/eive.log</file>
+        <encoder>
+            <pattern>%date %level %logger{50} %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="CAMEL" class="ch.qos.logback.core.FileAppender">
+        <file>logs/camel.log</file>
+        <encoder>
+            <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+        </encoder>
+    </appender>
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="APP" />
+    </root>
+
+    <logger name="eive.endpoint" level="INFO" >
+        <appender-ref ref="EIVE" />
+    </logger>
+    <logger name="org.apache.camel" level="INFO" >
+        <appender-ref ref="CAMEL" />
+    </logger>
+    <logger name="br.com.eive" level="DEBUG" >
+        <appender-ref ref="CAMEL" />
+    </logger>
+
+    <logger name="org.apache.camel.component.rabbitmq" level="TRACE" />
+    <logger name="org.redisson.connection" level="INFO" />
+    <logger name="org.apache.http" level="INFO" />
+    <logger name="org.hibernate.engine.internal" level="INFO" />
+</configuration>

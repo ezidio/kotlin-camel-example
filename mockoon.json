@@ -1,0 +1,115 @@
+{
+  "source": "mockoon:1.8.0",
+  "data": [
+    {
+      "type": "environment",
+      "item": {
+        "uuid": "",
+        "lastMigration": 10,
+        "name": "Fake ERP",
+        "endpointPrefix": "",
+        "latency": 0,
+        "port": 3090,
+        "routes": [
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "post",
+            "endpoint": "produto",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "{}",
+                "latency": 0,
+                "statusCode": "200",
+                "label": "",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": []
+              }
+            ],
+            "enabled": true
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "cotacao?exchange=USD",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "{\n    \"value\": 4.5\n}",
+                "latency": 0,
+                "statusCode": "200",
+                "label": "",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": []
+              }
+            ],
+            "enabled": true
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "cotacao?exchange=EUR",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "{\n    \"value\": 5\n}",
+                "latency": 0,
+                "statusCode": "200",
+                "label": "",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": []
+              }
+            ],
+            "enabled": true
+          }
+        ],
+        "proxyMode": false,
+        "proxyHost": "",
+        "https": false,
+        "cors": true,
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "proxyReqHeaders": [
+          {
+            "key": "",
+            "value": ""
+          }
+        ],
+        "proxyResHeaders": [
+          {
+            "key": "",
+            "value": ""
+          }
+        ]
+      }
+    }
+  ]
+}

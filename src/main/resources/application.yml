@@ -1,0 +1,34 @@
+logging:
+  level:
+    ROOT: INFO
+    br.com.eive.integration.test: DEBUG
+camel:
+  component:
+    jdbc:
+      enabled: true
+  springboot:
+    name: test-integration
+    rabbitmq:
+      auto-ack: false
+      prefetch-enabled: true
+      prefetch-count: 50
+  elasticsearch-rest:
+    hostAddresses: localhost:9200
+spring:
+  redis:
+    host: localhost
+    port: 6379
+  data:
+    elasticsearch:
+      cluster-name: docker-cluster
+      cluster-nodes: 127.0.0.1:9300
+      host: 127.0.0.1
+      port: 9200
+  datasource:
+    url: jdbc:postgresql://localhost:5433/postgres
+    username: postgres
+    password: pass
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
